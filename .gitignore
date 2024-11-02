@@ -1,0 +1,4 @@
+.env
+/data
+/outputs
+/top2vec_saved_model
