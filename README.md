@@ -26,3 +26,32 @@ Here is an overview of the two primary datasets used in this analysis:
 1. clorox_data.csv: The main dataset provided by the Clorox Company, containing the raw consumer reviews.
 2. processed_reviews.csv: The dataset prepared for topic modeling. This dataset was created by removing duplicate reviews and preprocessing the text, including converting to lowercase, removing punctuation, tokenizing, and lemmatizing words in the review text.
 
+## External Dependencies
+
+To run the code in this repository, make sure you have the dependencies listed in requirements.txt installed.
+
+### Installation
+
+1. Ensure you have **Python** installed on your machine. We recommend using **Anaconda**, which provides an easy way to manage Python and package dependencies. You can download Anaconda from [here](https://www.anaconda.com/products/distribution).
+
+2. Install the required dependencies using the following command:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. If you're using **Anaconda**, you can create and activate a new environment with the dependencies:
+
+    ```bash
+    conda create -n myenv python=3.8 
+    conda activate myenv
+    pip install -r requirements.txt
+    ```
+
+4. Verify the installation by running:
+
+    ```bash
+    python -c "import pkg_resources; print('All dependencies are installed.')"
+    ```
+
+
