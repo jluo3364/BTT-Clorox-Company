@@ -46,6 +46,7 @@ class LSA(TopicModel):
     Returns dataframe with added columns: topic_number, top_15_words, topic_label, similarity_score
     '''
     def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True):
+        print(f"\nCreating LSA models for {subcategory}")
         start_overall = time.time()
         subset_df = self.df[self.df['subcategory'] == subcategory]
         rating_reviews = subset_df.groupby('star_rating').apply(lambda x: x['review_text'].tolist()).to_dict()
