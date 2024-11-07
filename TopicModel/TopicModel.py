@@ -1,10 +1,16 @@
 import pandas as pd
+import sys
+import os
+
+# Add the directory containing procedure.py to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from procedure import similarity_scores
 
 class TopicModel():
 
     def __init__(self, model_name, df):
         self.model_name = model_name
-        self.models = [] # List of model objects, one per star rating
+        self.models = {} # star rating: model obj
         self.df = df # dataframe with initial review data
 
     '''
@@ -23,6 +29,15 @@ class TopicModel():
         raise NotImplementedError
     
     '''
+    Calculates the similarity score between reviews and topics
+    '''
+    def calculate_similarity_score(self, subcategory):
+        reviews = self.df[self.df['subcategory'] == subcategory]['review_text'].tolist()
+        topic_labels = self.df[self.df['subcategory'] == subcategory][f'{self.model_name}_topic_label'].tolist()
+        self.df.loc[self.df['subcategory'] == subcategory, f'{self.model_name}_similarity_score'] = similarity_scores(reviews, topic_labels)
+        return self.df
+
+    '''
     Returns a list of dataframes, one for each star rating
     '''
     def get_star_rating_dataframes(self):
@@ -39,9 +54,12 @@ class TopicModel():
     
     '''
     Returns a dataframe with the topic phrase, star rating, count, and average similarity score
+    for topics in the given subcategory
     '''
-    def get_topic_information(self):
-        topic_similarity_df = self.df.groupby([f'{self.model_name}_topic', 'star_rating'])['similarity_score'].mean().reset_index()
-        topic_similarity_df['count'] = self.df.groupby([f'{self.model_name}_topic', 'star_rating'])['similarity_score'].count().values
+    def get_topic_information(self, subcategory):
+        model = self.model_name
+        subset_df = self.df[self.df['subcategory'] == subcategory]
+        topic_similarity_df = subset_df.groupby(['star_rating', f'{model}_topic_label'])[f'{model}_similarity_score'].mean().reset_index()
+        topic_similarity_df['count'] = subset_df.groupby(['star_rating', f'{model}_topic_label'])[f'{model}_similarity_score'].count().values
         return topic_similarity_df
     
