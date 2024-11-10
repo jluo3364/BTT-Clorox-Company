@@ -54,4 +54,26 @@ To run the code in this repository, make sure you have the dependencies listed i
     python -c "import pkg_resources; print('All dependencies are installed.')"
     ```
 
+## Repository Structure
+
+BTT-Clorox-Company/
+├── TopicModel/                         # Folder containing Topic Model classes for LDA2Vec, LSA, and Top2Vec
+│   ├── TopicModel.py                   # Base Topic Model class
+│   ├── LDA2Vec.py                      # LDA2Vec class implementation, inherits TopicModel
+│   ├── LSA.py                          # LSA class implementation, inherits TopicModel
+├── bertopic/                           # Folder containing bertopic notebooks experimenting with clustering methods
+│   ├── bertopic_hdbscan.ipynb          # Detailed installation instructions
+│   └── bertopic_kmeans_lotion.ipynb    # In-depth usage guide and examples
+├── clustering                          # Folder containing initial experimentation with clustering
+│   ├──
+|   └──
+├── data/                               # Folder containing input data
+├── eda/                                # Folder containing initial eda
+├── merging/                            # Folder containing notebooks to merge topic modeling outputs
+│   ├── 
+│   └── 
+├── .gitignore                          # Files and directories to ignore in git
+├── requirements.txt                    # List of dependencies
+└── README.md                           # Project README 
+
 

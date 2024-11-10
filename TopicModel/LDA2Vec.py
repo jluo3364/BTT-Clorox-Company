@@ -62,10 +62,10 @@ class LDA2Vec(TopicModel):
             def create_custom_stopwords(df):
                 unique_words = set()
                 df['product_title'].drop_duplicates().str.split().apply(unique_words.update)
-                df['brand'].drop_duplicates().str.split().apply(unique_words.update)
+                df['brand'].drop_duplicates().dropna().str.split().apply(unique_words.update)
                 unique_words = list(unique_words)
 
-                custom_stopwords = unique_words + [word.lower() for word in unique_words] + [
+                custom_stopwords = unique_words + ['nt'] + [word.lower() for word in unique_words] + [
                     word.upper() for word in unique_words] + [word.capitalize() for word in unique_words]
                 custom_stopwords = list(set(custom_stopwords))
 
@@ -185,7 +185,8 @@ class LDA2Vec(TopicModel):
         
         # calculate similarity score
         if calc_similarity:
-            self.calculate_similarity_score(subcategory)
+            self.calculate_similarity_score(subcategory, True)
+            self.calculate_similarity_score(subcategory, False)
             if verbose:
                 print(f"Calculating similarity scores for {subcategory}")
         
