@@ -56,6 +56,7 @@ To run the code in this repository, make sure you have the dependencies listed i
 
 ## Repository Structure
 
+```
 BTT-Clorox-Company/
 ├── TopicModel/                         # Folder containing Topic Model classes for LDA2Vec, LSA, and Top2Vec
 │   ├── TopicModel.py                   # Base Topic Model class
@@ -75,5 +76,5 @@ BTT-Clorox-Company/
 ├── .gitignore                          # Files and directories to ignore in git
 ├── requirements.txt                    # List of dependencies
 └── README.md                           # Project README 
-
+```
 
