@@ -1,0 +1,564 @@
+Creating LSA model for 1.0 star rating with 595 reviews, 3 topics
+Finished creating LSA model for 1.0 star rating in 0.88 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 226 reviews, 3 topics
+Finished creating LSA model for 2.0 star rating in 0.81 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 700 reviews, 3 topics
+Finished creating LSA model for 3.0 star rating in 0.82 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 2676 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.93 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 16609 reviews, 2 topics
+Finished creating LSA model for 5.0 star rating in 2.13 seconds
+
+--------------------------------------------------
+Finished creating LSA models for ODOR CONTROLLING DISINFECTING SPRAYS in 5.71 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for ODOR CONTROLLING DISINFECTING SPRAYS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.76 seconds
+Time to process chunk 1000-2000: 3.26 seconds
+Time to process chunk 2000-3000: 3.09 seconds
+Time to process chunk 3000-4000: 3.06 seconds
+Time to process chunk 4000-5000: 4.49 seconds
+Time to process chunk 5000-6000: 4.37 seconds
+Time to process chunk 6000-7000: 4.27 seconds
+Time to process chunk 7000-8000: 4.77 seconds
+Time to process chunk 8000-9000: 4.41 seconds
+Time to process chunk 9000-10000: 3.85 seconds
+Time to process chunk 10000-11000: 3.66 seconds
+Time to process chunk 11000-12000: 5.09 seconds
+Time to process chunk 12000-13000: 3.89 seconds
+Time to process chunk 13000-14000: 4.26 seconds
+Time to process chunk 14000-15000: 3.87 seconds
+Time to process chunk 15000-16000: 3.75 seconds
+Time to process chunk 16000-17000: 3.72 seconds
+Time to process chunk 17000-18000: 3.61 seconds
+Time to process chunk 18000-19000: 3.67 seconds
+Time to process chunk 19000-20000: 3.82 seconds
+Time to process chunk 20000-21000: 3.77 seconds
+Total processing time: 82.42 seconds
+Creating LSA model for 1.0 star rating with 630 reviews, 3 topics
+Finished creating LSA model for 1.0 star rating in 0.86 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 213 reviews, 3 topics
+Finished creating LSA model for 2.0 star rating in 0.85 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 352 reviews, 3 topics
+Finished creating LSA model for 3.0 star rating in 0.70 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 862 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.51 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 8697 reviews, 2 topics
+Finished creating LSA model for 5.0 star rating in 1.47 seconds
+
+--------------------------------------------------
+Finished creating LSA models for DILUTABLES SCENTED/NON-DISINFECTING DILUTABLES in 4.49 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for DILUTABLES SCENTED/NON-DISINFECTING DILUTABLES
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.19 seconds
+Time to process chunk 1000-2000: 4.11 seconds
+Time to process chunk 2000-3000: 4.07 seconds
+Time to process chunk 3000-4000: 3.57 seconds
+Time to process chunk 4000-5000: 5.34 seconds
+Time to process chunk 5000-6000: 4.57 seconds
+Time to process chunk 6000-7000: 3.71 seconds
+Time to process chunk 7000-8000: 3.06 seconds
+Time to process chunk 8000-9000: 3.02 seconds
+Time to process chunk 9000-10000: 3.31 seconds
+Time to process chunk 10000-11000: 3.45 seconds
+Total processing time: 41.41 seconds
+Creating LSA model for 1.0 star rating with 1334 reviews, 3 topics
+Finished creating LSA model for 1.0 star rating in 0.96 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 511 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.48 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 650 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.52 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 1109 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.56 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 6273 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.70 seconds
+
+--------------------------------------------------
+Finished creating LSA models for ODOR CONTROLLING AIR FRESHENERS in 3.34 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for ODOR CONTROLLING AIR FRESHENERS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.45 seconds
+Time to process chunk 1000-2000: 3.37 seconds
+Time to process chunk 2000-3000: 4.45 seconds
+Time to process chunk 3000-4000: 4.63 seconds
+Time to process chunk 4000-5000: 3.07 seconds
+Time to process chunk 5000-6000: 3.20 seconds
+Time to process chunk 6000-7000: 3.55 seconds
+Time to process chunk 7000-8000: 4.66 seconds
+Time to process chunk 8000-9000: 4.56 seconds
+Time to process chunk 9000-10000: 4.70 seconds
+Total processing time: 39.63 seconds
+Creating LSA model for 1.0 star rating with 177 reviews, 3 topics
+Finished creating LSA model for 1.0 star rating in 0.70 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 125 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.52 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 271 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.50 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 879 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.67 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 4143 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.55 seconds
+
+--------------------------------------------------
+Finished creating LSA models for BODY CARE BAR SOAP in 3.03 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for BODY CARE BAR SOAP
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.46 seconds
+Time to process chunk 1000-2000: 3.14 seconds
+Time to process chunk 2000-3000: 3.42 seconds
+Time to process chunk 3000-4000: 3.52 seconds
+Time to process chunk 4000-5000: 3.56 seconds
+Time to process chunk 5000-6000: 2.72 seconds
+Total processing time: 19.81 seconds
+Creating LSA model for 1.0 star rating with 371 reviews, 3 topics
+Finished creating LSA model for 1.0 star rating in 0.88 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 128 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.48 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 261 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.55 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 485 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.49 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 4107 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.52 seconds
+
+--------------------------------------------------
+Finished creating LSA models for FLOOR CLEANERS CARPET in 2.99 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for FLOOR CLEANERS CARPET
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 2.83 seconds
+Time to process chunk 1000-2000: 2.91 seconds
+Time to process chunk 2000-3000: 3.22 seconds
+Time to process chunk 3000-4000: 3.77 seconds
+Time to process chunk 4000-5000: 3.34 seconds
+Time to process chunk 5000-6000: 3.26 seconds
+Total processing time: 19.34 seconds
+Creating LSA model for 1.0 star rating with 272 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.45 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 97 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.52 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 165 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.48 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 420 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.59 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 3777 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.49 seconds
+
+--------------------------------------------------
+Finished creating LSA models for SPRAY CLEANERS BLEACH CLEANERS in 2.61 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for SPRAY CLEANERS BLEACH CLEANERS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.15 seconds
+Time to process chunk 1000-2000: 3.91 seconds
+Time to process chunk 2000-3000: 3.68 seconds
+Time to process chunk 3000-4000: 4.75 seconds
+Time to process chunk 4000-5000: 4.13 seconds
+Total processing time: 19.62 seconds
+Creating LSA model for 1.0 star rating with 562 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 1.03 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 165 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 1.04 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 211 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.93 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 385 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.79 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 3255 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 2.35 seconds
+
+--------------------------------------------------
+Finished creating LSA models for TOILET BOWL CLEANERS CONVENIENCE TB CLEANERS in 6.35 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for TOILET BOWL CLEANERS CONVENIENCE TB CLEANERS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 8.34 seconds
+Time to process chunk 1000-2000: 5.43 seconds
+Time to process chunk 2000-3000: 3.54 seconds
+Time to process chunk 3000-4000: 3.39 seconds
+Time to process chunk 4000-5000: 2.65 seconds
+Total processing time: 23.35 seconds
+Creating LSA model for 1.0 star rating with 244 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.59 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 78 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.44 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 123 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.51 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 298 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.67 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 3684 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.52 seconds
+
+--------------------------------------------------
+Finished creating LSA models for ABRASIVE CLEANERS in 2.80 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for ABRASIVE CLEANERS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.18 seconds
+Time to process chunk 1000-2000: 3.42 seconds
+Time to process chunk 2000-3000: 3.41 seconds
+Time to process chunk 3000-4000: 3.41 seconds
+Time to process chunk 4000-5000: 2.00 seconds
+Total processing time: 15.42 seconds
+Creating LSA model for 1.0 star rating with 224 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.44 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 55 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.69 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 98 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.58 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 222 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.50 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 2195 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.55 seconds
+
+--------------------------------------------------
+Finished creating LSA models for DILUTABLES PINE/DISINFECTING DILUTABLES in 2.82 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for DILUTABLES PINE/DISINFECTING DILUTABLES
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.81 seconds
+Time to process chunk 1000-2000: 3.45 seconds
+Time to process chunk 2000-3000: 3.04 seconds
+Total processing time: 10.30 seconds
+Creating LSA model for 1.0 star rating with 272 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.48 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 71 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.83 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 120 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.57 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 217 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.60 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1953 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.45 seconds
+
+--------------------------------------------------
+Finished creating LSA models for BATHROOM CLEANERS MILDEW CLEANERS in 3.03 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for BATHROOM CLEANERS MILDEW CLEANERS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.16 seconds
+Time to process chunk 1000-2000: 3.15 seconds
+Time to process chunk 2000-3000: 3.23 seconds
+Total processing time: 9.54 seconds
+Creating LSA model for 1.0 star rating with 337 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.50 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 138 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.48 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 160 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.46 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 283 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.40 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1596 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.32 seconds
+
+--------------------------------------------------
+Finished creating LSA models for DISH CARE in 2.23 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for DISH CARE
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 4.37 seconds
+Time to process chunk 1000-2000: 3.59 seconds
+Time to process chunk 2000-3000: 2.42 seconds
+Total processing time: 10.38 seconds
+Creating LSA model for 1.0 star rating with 67 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.48 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 50 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.45 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 72 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.73 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 115 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.56 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 2161 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.50 seconds
+
+--------------------------------------------------
+Finished creating LSA models for CONSUMABLE TOOLS SPONGES in 2.76 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for CONSUMABLE TOOLS SPONGES
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.21 seconds
+Time to process chunk 1000-2000: 3.11 seconds
+Time to process chunk 2000-3000: 2.18 seconds
+Total processing time: 8.50 seconds
+Creating LSA model for 1.0 star rating with 248 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.43 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 83 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.39 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 112 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.46 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 214 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.47 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1460 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.40 seconds
+
+--------------------------------------------------
+Finished creating LSA models for SPECIALIZED SPRAYS in 2.20 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for SPECIALIZED SPRAYS
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.35 seconds
+Time to process chunk 1000-2000: 4.02 seconds
+Time to process chunk 2000-3000: 1.28 seconds
+Total processing time: 8.65 seconds
+Creating LSA model for 1.0 star rating with 187 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.52 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 126 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.44 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 165 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.65 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 198 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 0.62 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1408 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 0.46 seconds
+
+--------------------------------------------------
+Finished creating LSA models for LIP CARE PREMIUM LIP CARE in 2.77 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for LIP CARE PREMIUM LIP CARE
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 5.95 seconds
+Time to process chunk 1000-2000: 4.83 seconds
+Time to process chunk 2000-3000: 1.27 seconds
+Total processing time: 12.05 seconds
+Creating LSA model for 1.0 star rating with 246 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.45 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 72 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.45 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 94 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 0.46 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 123 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 2.66 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1507 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 2.47 seconds
+
+--------------------------------------------------
+Finished creating LSA models for DILUTABLES NATURAL/CONCENTRATED in 6.58 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for DILUTABLES NATURAL/CONCENTRATED
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.78 seconds
+Time to process chunk 1000-2000: 3.56 seconds
+Time to process chunk 2000-3000: 1.02 seconds
+Total processing time: 8.36 seconds
+Creating LSA model for 1.0 star rating with 189 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.59 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 70 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.53 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 97 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 5.24 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 191 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 4.71 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1272 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 2.45 seconds
+
+--------------------------------------------------
+Finished creating LSA models for SPECIALIZED SPRAYS OVEN/SPECIALTY in 13.58 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for SPECIALIZED SPRAYS OVEN/SPECIALTY
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 5.09 seconds
+Time to process chunk 1000-2000: 3.33 seconds
+Total processing time: 8.42 seconds
+Creating LSA model for 1.0 star rating with 104 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.45 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 36 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.87 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 93 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 4.61 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 258 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 4.68 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1326 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 2.77 seconds
+
+--------------------------------------------------
+Finished creating LSA models for MEN'S CARE in 13.50 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for MEN'S CARE
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 3.79 seconds
+Time to process chunk 1000-2000: 3.63 seconds
+Total processing time: 7.42 seconds
+Creating LSA model for 1.0 star rating with 220 reviews, 2 topics
+Finished creating LSA model for 1.0 star rating in 0.81 seconds
+
+--------------------------------------------------
+Creating LSA model for 2.0 star rating with 86 reviews, 2 topics
+Finished creating LSA model for 2.0 star rating in 0.51 seconds
+
+--------------------------------------------------
+Creating LSA model for 3.0 star rating with 111 reviews, 2 topics
+Finished creating LSA model for 3.0 star rating in 4.65 seconds
+
+--------------------------------------------------
+Creating LSA model for 4.0 star rating with 152 reviews, 2 topics
+Finished creating LSA model for 4.0 star rating in 4.72 seconds
+
+--------------------------------------------------
+Creating LSA model for 5.0 star rating with 1009 reviews, 1 topics
+Finished creating LSA model for 5.0 star rating in 2.62 seconds
+
+--------------------------------------------------
+Finished creating LSA models for HAIR CARE in 13.39 seconds
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calculating similarity scores for HAIR CARE
+/Users/jessicaluo/Desktop/scrap/text_processes/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Time to process chunk 0-1000: 4.08 seconds
+Time to process chunk 1000-2000: 2.85 seconds
+Total processing time: 6.93 seconds

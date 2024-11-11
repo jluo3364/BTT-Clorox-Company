@@ -42,3 +42,35 @@ class BERTopic(TopicModel):
                 print(f"Creating BERTopic model for {rating} star rating with {len(reviews)} reviews, {rating_num_topics} topics")
             start = time.time()
             
+    def create_topic_model(text, num_topics):
+        # Step 1 - Extract embeddings
+        embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+        # Step 2 - Reduce dimensionality
+        pca_model = PCA(n_components=10)
+
+        # Step 3 - Cluster reduced embeddings
+        cluster_model = KMeans(n_clusters=num_topics)
+
+        # Step 4 - Tokenize topics
+        vectorizer_model = CountVectorizer(stop_words="english")
+
+        # Step 5 - Create topic representation
+        ctfidf_model = ClassTfidfTransformer()
+
+        # Step 6 - (Optional) Fine-tune topic representations with 
+        # a `bertopic.representation` model
+        representation_model = KeyBERTInspired()
+
+        topic_model = BERTopic(
+            embedding_model=embedding_model,          # Step 1 - Extract embeddings
+            umap_model=pca_model,                    # Step 2 - Reduce dimensionality
+            hdbscan_model=cluster_model,              # Step 3 - Cluster reduced embeddings
+            vectorizer_model=vectorizer_model,        # Step 4 - Tokenize topics
+            ctfidf_model=ctfidf_model                # Step 5 - Extract topic words
+        # representation_model=representation_model # Step 6 - (Optional) Fine-tune topic representations
+        )
+
+        # Fit BERTopic model
+        topic_model.fit_transform(text)
+        return topic_model
