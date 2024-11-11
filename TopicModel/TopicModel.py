@@ -31,11 +31,15 @@ class TopicModel():
     '''
     Calculates the similarity score between reviews and topics
     '''
-    def calculate_similarity_score(self, subcategory):
-        reviews = self.df[self.df['subcategory'] == subcategory]['review_text'].tolist()
-        topic_labels = self.df[self.df['subcategory'] == subcategory][f'{self.model_name}_topic_label'].tolist()
-        self.df.loc[self.df['subcategory'] == subcategory, f'{self.model_name}_similarity_score'] = similarity_scores(reviews, topic_labels)
-        return self.df
+    def calculate_similarity_score(self, subcategory, topic_words):
+        if topic_words:
+            reviews = self.df[self.df['subcategory'] == subcategory]['review_text'].tolist()
+            topic_words = self.df[self.df['subcategory'] == subcategory][f'{self.model_name}_topic_words'].tolist()
+            self.df.loc[self.df['subcategory'] == subcategory, f'{self.model_name}_words_similarity_score'] = similarity_scores(reviews, topic_words)
+        else:
+            reviews = self.df[self.df['subcategory'] == subcategory]['review_text'].tolist()
+            topic_labels = self.df[self.df['subcategory'] == subcategory][f'{self.model_name}_topic_label'].tolist()
+            self.df.loc[self.df['subcategory'] == subcategory, f'{self.model_name}_similarity_score'] = similarity_scores(reviews, topic_labels)
 
     '''
     Returns a list of dataframes, one for each star rating
