@@ -1,4 +1,5 @@
 .env
+requirements.txt
 __pycache__/
 *.pyc
 /data

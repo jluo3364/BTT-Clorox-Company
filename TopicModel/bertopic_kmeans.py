@@ -18,16 +18,16 @@ from bertopic.representation import KeyBERTInspired
 from bertopic.vectorizers import ClassTfidfTransformer
 from sklearn.decomposition import PCA
 
-class BERTopic(TopicModel):
+class BERTopic_kmeans(TopicModel):
     def __init__(self, df):
         super().__init__('bertopic_kmeans', df)
 
-    def train_model(self, subcategories, verbose=0):
+    def train_model(self, subcategories, verbose=0, top_n_words=15):
         for subcategory in subcategories:
-            self.train_model_subcategory(subcategory, verbose=verbose)
+            self.train_model_subcategory(subcategory, verbose=verbose, top_n_words=top_n_words)
         return self.df
 
-    def create_topic_model(text, num_topics):
+    def create_topic_model(self, text, num_topics, top_n_words=15):
         # Step 1 - Extract embeddings
         embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
@@ -48,7 +48,7 @@ class BERTopic(TopicModel):
         representation_model = KeyBERTInspired()
 
         topic_model = BERTopic( 
-            top_n_words=15,                           # Number of top words per topic
+            top_n_words=top_n_words,                           # Number of top words per topic
             embedding_model=embedding_model,          # Step 1 - Extract embeddings
             umap_model=pca_model,                    # Step 2 - Reduce dimensionality
             hdbscan_model=cluster_model,              # Step 3 - Cluster reduced embeddings
@@ -65,7 +65,7 @@ class BERTopic(TopicModel):
     Creates the bertopic model on one subcategory.
     Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
-    def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True):
+    def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True, top_n_words=15):
         model_capitlized = "BERTopic kmeans" 
         print(f"\nCreating {model_capitlized} models for {subcategory}")
         start_overall = time.time()
@@ -82,20 +82,20 @@ class BERTopic(TopicModel):
             if verbose:
                 print(f"Creating {model_capitlized} model for {rating} star rating with {len(reviews)} reviews, {rating_num_topics} topics")
             start = time.time()
-            model = self.create_topic_model(reviews, rating_num_topics)
+            model = self.create_topic_model(reviews, rating_num_topics, top_n_words=top_n_words)
             
             output = model.get_topic_info()  # topic info for current rating's model
             topic_words_labels =  {}  # {topic_number: [top_words, label]}
-            for row in output.iterrows():
+            for _, row in output.iterrows():
                 topic_words = row['Representation']
                 topic_label = generate_topic_label(topic_words, rating)
                 topic_words_labels[row['Topic']] = [topic_words, topic_label]
                 if verbose == 2:
-                    print(f"Topic {i}: {topic_label}\n\t{topic_words}")
+                    print(f"Topic {row['Topic']}: {topic_label}\n\t{topic_words}")
             
             if verbose:
                 print(f"Finished creating {model_capitlized} model for {rating} in {time.time() - start:.2f} seconds")
-                print('\n' +' -'*50)
+                print('\n' +'-'*50)
             #     new_row = pd.DataFrame({
             #         'star_rating': [rating],
             #         f'{model_name}_topic_number': [row['Topic']],
@@ -104,11 +104,12 @@ class BERTopic(TopicModel):
             #     df_topics = pd.concat([df_topics, new_row], ignore_index=True)  # add topics for current rating to df_topics
            
            # get df of current reviews with topic labels
-            cur_reviews = rating_indices[rating]
-            labeled_reviews = model.get_document_info(cur_reviews)
-            self.df.loc[cur_reviews, f'{model_name}_topic_number'] = labeled_reviews['Topic']
-            self.df.loc[cur_reviews, f'{model_name}_topic_words'] = labeled_reviews['Representation']
-            self.df.loc[cur_reviews, f'{model_name}_topic_label'] = [topic_words_labels[i][1] for i in labeled_reviews['Topic']]
+            cur_reviews_indices = rating_indices[rating]
+            labeled_reviews = model.get_document_info(reviews)
+            labeled_reviews.loc[:, 'Representation'] = labeled_reviews['Representation'].map(lambda x: ', '.join(x))
+            self.df.loc[cur_reviews_indices, f'{model_name}_topic_number'] = [i for i in labeled_reviews['Topic']]
+            self.df.loc[cur_reviews_indices, f'{model_name}_topic_words'] = [words for words in labeled_reviews['Representation']]
+            self.df.loc[cur_reviews_indices, f'{model_name}_topic_label'] = [topic_words_labels[i][1] for i in labeled_reviews['Topic']]
             self.models[rating] = model  # add model to models dictionary
         
         if verbose:

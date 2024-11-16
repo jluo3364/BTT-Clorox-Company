@@ -40,6 +40,7 @@ class TopicModel():
             reviews = self.df[self.df['subcategory'] == subcategory]['review_text'].tolist()
             topic_labels = self.df[self.df['subcategory'] == subcategory][f'{self.model_name}_topic_label'].tolist()
             self.df.loc[self.df['subcategory'] == subcategory, f'{self.model_name}_similarity_score'] = similarity_scores(reviews, topic_labels)
+        return self.df
 
     '''
     Returns a list of dataframes, one for each star rating
