@@ -15,7 +15,7 @@ class TopicModel():
 
     '''
     Trains the topic model on the given subcategories.
-    Returns dataframe with added columns: topic_number, top_15_words, topic_label, similarity_score
+    Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
     def train_model(self, subcategories): 
         # chunk by star rating and subcategories
@@ -31,7 +31,7 @@ class TopicModel():
     '''
     Calculates the similarity score between reviews and topics
     '''
-    def calculate_similarity_score(self, subcategory, topic_words):
+    def calculate_similarity_score(self, subcategory, topic_words=False):
         if topic_words:
             reviews = self.df[self.df['subcategory'] == subcategory]['review_text'].tolist()
             topic_words = self.df[self.df['subcategory'] == subcategory][f'{self.model_name}_topic_words'].tolist()

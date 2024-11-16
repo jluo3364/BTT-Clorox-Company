@@ -19,7 +19,7 @@ class LSA(TopicModel):
     
     '''
     Creates the LSA model on the given subcategories.
-    Returns dataframe with added columns: topic_number, top_15_words, topic_label, similarity_score
+    Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
     def train_model(self, subcategories, verbose=0):
         for subcategory in subcategories:
@@ -43,7 +43,7 @@ class LSA(TopicModel):
     
     '''
     Creates the LSA model on one subcategory.
-    Returns dataframe with added columns: topic_number, top_15_words, topic_label, similarity_score
+    Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
     def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True):
         print(f"\nCreating LSA models for {subcategory}")
@@ -85,7 +85,7 @@ class LSA(TopicModel):
             model = self.model_name
             cur_reviews = rating_indices[rating]
             self.df.loc[cur_reviews, f'{model}_topic_number'] = topic_for_reviews
-            self.df.loc[cur_reviews, f'{model}_top_15_words'] = [', '.join(topic_words_labels[i][0]) for i in topic_for_reviews]
+            self.df.loc[cur_reviews, f'{model}_topic_words'] = [', '.join(topic_words_labels[i][0]) for i in topic_for_reviews]
             self.df.loc[cur_reviews, f'{model}_topic_label'] = [topic_words_labels[i][1] for i in topic_for_reviews]
        
         if verbose:
