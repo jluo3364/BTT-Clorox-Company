@@ -72,6 +72,7 @@ class LSA(TopicModel):
                 top_word_indices = np.argsort(topic_vectors[i])[-15:]  # get the indices of top 15 words
                 topic_words = [terms[idx] for idx in top_word_indices]
                 topic_label = generate_topic_label(topic_words, rating)
+                topic_label = self.clean_topic_label(topic_label)
                 if verbose == 2:
                     print(f"Topic {i}: {topic_label}\n\t{topic_words}")
                 topic_words_labels[i] = [topic_words, topic_label]
