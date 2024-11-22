@@ -1,5 +1,5 @@
 # inherit TopicModel class and implement LSA model
-from TopicModel import TopicModel
+from .TopicModel import TopicModel
 import time
 import sys
 import os

@@ -1,4 +1,4 @@
-from TopicModel import TopicModel
+from .TopicModel import TopicModel
 import time
 import sys
 import os

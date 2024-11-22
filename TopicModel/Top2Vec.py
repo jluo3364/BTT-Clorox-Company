@@ -1,4 +1,4 @@
-from TopicModel import TopicModel
+from .TopicModel import TopicModel
 import numpy as np
 import pandas as pd
 from top2vec import Top2Vec
