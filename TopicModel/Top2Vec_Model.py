@@ -1,4 +1,4 @@
-from .TopicModel import TopicModel
+from TopicModel import TopicModel
 import numpy as np
 import pandas as pd
 from top2vec import Top2Vec
@@ -47,7 +47,11 @@ class Top2Vec_Model(TopicModel):
             star_rating_dataframe = star_rating_dataframes[i]
             if verbose:
                 print(f"Creating Top2Vec model with {desired_num_topics[i]} topics for {star_rating_dataframe.shape[0]} reviews (star rating {i+1}) in subcategory {subcategory}")
-            top2vec_model = Top2Vec(documents=list(star_rating_dataframe['review_text']), embedding_model='all-MiniLM-L6-v2', workers=20, ngram_vocab=True)
+            try:
+                top2vec_model = Top2Vec(documents=list(star_rating_dataframe['review_text']), embedding_model='all-MiniLM-L6-v2', workers=20, ngram_vocab=True)
+            except ValueError as e:
+                print(f"Error with star rating {i+1} in {subcategory}: {e}")
+                continue
             # top2vec_model.save("top2vec_saved_models/top2vec_" + str(star_rating_dataframe['star_rating'].iloc[0]) + "_star")
             topics_generated = top2vec_model.get_num_topics()
             if topics_generated > desired_num_topics[i]:
@@ -68,8 +72,8 @@ class Top2Vec_Model(TopicModel):
         
         # Assign topics to each review and add relevant columns to df
         for i in range(len(top2vec_models)):
-            print("STAR RATING ", i+1)
-            print("COLUMNS", star_rating_dataframes[i].columns)
+            # print("STAR RATING ", i+1)
+            # print("COLUMNS", star_rating_dataframes[i].columns)
             topic_nums, topic_score, topic_words, word_scores = top2vec_models[i].get_documents_topics(doc_ids=top2vec_models[i].document_ids, reduced=topic_reduction[i])
             star_rating_dataframes[i]['top2vec_topic_number'] = topic_nums
             star_rating_dataframes[i]['top2vec_topic_label'] = star_rating_dataframes[i]['top2vec_topic_number'].apply(lambda x: refined_topics[i+1][x])
