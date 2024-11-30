@@ -28,9 +28,9 @@ class BERTopic_kmeans(TopicModel):
     def __init__(self, df):
         super().__init__('bertopic_kmeans', df)
 
-    def train_model(self, subcategories, verbose=0, top_n_words=15):
+    def train_model(self, subcategories, verbose=0, top_n_words=15, calc_similarity=False):
         for subcategory in subcategories:
-            self.train_model_subcategory(subcategory, verbose=verbose, top_n_words=top_n_words)
+            self.train_model_subcategory(subcategory, verbose=verbose, top_n_words=top_n_words, calc_similarity=calc_similarity)
         return self.df
 
     def create_topic_model(self, text, num_topics, top_n_words=15):
