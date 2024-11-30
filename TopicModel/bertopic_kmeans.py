@@ -71,7 +71,7 @@ class BERTopic_kmeans(TopicModel):
     Creates the bertopic model on one subcategory.
     Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
-    def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True, top_n_words=15):
+    def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=False, top_n_words=15):
         model_capitalized = "BERTopic kmeans" 
         print(f"\nCreating {model_capitalized} models for {subcategory}")
         start_overall = time.time()
