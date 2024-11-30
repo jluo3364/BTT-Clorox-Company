@@ -1,5 +1,5 @@
 # inherit TopicModel class and implement LSA model
-from .TopicModel import TopicModel
+from TopicModel import TopicModel
 import time
 import sys
 import os
@@ -45,7 +45,7 @@ class LSA(TopicModel):
     Creates the LSA model on one subcategory.
     Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
-    def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True):
+    def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=False):
         print(f"\nCreating LSA models for {subcategory}")
         start_overall = time.time()
         subset_df = self.df[self.df['subcategory'] == subcategory]
@@ -81,7 +81,11 @@ class LSA(TopicModel):
                 print(f"Finished creating LSA model for {rating} star rating in {end-start:.2f} seconds")
                 print()
                 print('-'*50)
-            self.models[rating] = (vectorizer, svd_model, topic_matrix)
+            if self.models.get(subcategory) is None:
+                self.models[subcategory] = {}
+            if self.models.get(subcategory) is None:
+                self.models[subcategory] = {}
+            self.models[subcategory][rating] = (vectorizer, svd_model, topic_matrix)
             topic_for_reviews = topic_matrix.argmax(axis=1)
             model = self.model_name
             cur_reviews = rating_indices[rating]

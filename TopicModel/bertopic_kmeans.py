@@ -1,4 +1,4 @@
-from .TopicModel import TopicModel
+from TopicModel import TopicModel
 import time
 import sys
 import os
@@ -53,8 +53,8 @@ class BERTopic_kmeans(TopicModel):
             umap_model=pca_model,                    # Step 2 - Reduce dimensionality
             hdbscan_model=cluster_model,              # Step 3 - Cluster reduced embeddings
             vectorizer_model=vectorizer_model,        # Step 4 - Tokenize topics
-            ctfidf_model=ctfidf_model                # Step 5 - Extract topic words
-        # representation_model=representation_model # Step 6 - (Optional) Fine-tune topic representations
+            ctfidf_model=ctfidf_model,                # Step 5 - Extract topic words
+            representation_model=representation_model # Step 6 - (Optional) Fine-tune topic representations
         )
 
         # Fit BERTopic model
@@ -66,8 +66,8 @@ class BERTopic_kmeans(TopicModel):
     Returns dataframe with added columns: topic_number, topic_words, topic_label, similarity_score
     '''
     def train_model_subcategory(self, subcategory, verbose=0, calc_similarity=True, top_n_words=15):
-        model_capitlized = "BERTopic kmeans" 
-        print(f"\nCreating {model_capitlized} models for {subcategory}")
+        model_capitalized = "BERTopic kmeans" 
+        print(f"\nCreating {model_capitalized} models for {subcategory}")
         start_overall = time.time()
         subset_df = self.df[self.df['subcategory'] == subcategory]
         rating_reviews = subset_df.groupby('star_rating').apply(lambda x: x['review_text'].tolist()).to_dict()
@@ -80,7 +80,7 @@ class BERTopic_kmeans(TopicModel):
         for rating, reviews in rating_reviews.items():
             rating_num_topics = calculate_num_topics_star_rating(total_topics, rating)
             if verbose:
-                print(f"Creating {model_capitlized} model for {rating} star rating with {len(reviews)} reviews, {rating_num_topics} topics")
+                print(f"Creating {model_capitalized} model for {rating} star rating with {len(reviews)} reviews, {rating_num_topics} topics")
             start = time.time()
             model = self.create_topic_model(reviews, rating_num_topics, top_n_words=top_n_words)
             
@@ -95,7 +95,7 @@ class BERTopic_kmeans(TopicModel):
                     print(f"Topic {row['Topic']}: {topic_label}\n\t{topic_words}")
             
             if verbose:
-                print(f"Finished creating {model_capitlized} model for {rating} in {time.time() - start:.2f} seconds")
+                print(f"Finished creating {model_capitalized} model for {rating} in {time.time() - start:.2f} seconds")
                 print('\n' +'-'*50)
             #     new_row = pd.DataFrame({
             #         'star_rating': [rating],
@@ -111,10 +111,14 @@ class BERTopic_kmeans(TopicModel):
             self.df.loc[cur_reviews_indices, f'{model_name}_topic_number'] = [i for i in labeled_reviews['Topic']]
             self.df.loc[cur_reviews_indices, f'{model_name}_topic_words'] = [words for words in labeled_reviews['Representation']]
             self.df.loc[cur_reviews_indices, f'{model_name}_topic_label'] = [topic_words_labels[i][1] for i in labeled_reviews['Topic']]
-            self.models[rating] = model  # add model to models dictionary
+            if self.models.get(subcategory) is None:
+                self.models[subcategory] = {}
+            if self.models.get(subcategory) is None:
+                self.models[subcategory] = {}
+            self.models[subcategory][rating] = model  # add model to models dictionary
         
         if verbose:
-            print(f"Finished creating {model_capitlized} models for {subcategory} in {time.time()-start_overall:.2f} seconds")
+            print(f"Finished creating {model_capitalized} models for {subcategory} in {time.time()-start_overall:.2f} seconds")
             print('-'*200)
 
         if calc_similarity:
