@@ -1,5 +1,10 @@
 # inherit TopicModel class and implement LSA model
-from TopicModel import TopicModel
+try:
+    # When executed as part of a package (e.g., via main.py)
+    from .TopicModel import TopicModel
+except ImportError:
+    # When executed directly or in a Jupyter notebook
+    from TopicModel import TopicModel
 import time
 import sys
 import os

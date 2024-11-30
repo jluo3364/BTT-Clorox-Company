@@ -1,4 +1,9 @@
-from .TopicModel import TopicModel
+try:
+    # When executed as part of a package (e.g., via main.py)
+    from .TopicModel import TopicModel
+except ImportError:
+    # When executed directly or in a Jupyter notebook
+    from TopicModel import TopicModel
 import pandas as pd
 import numpy as np
 
@@ -33,12 +38,12 @@ class LDA2Vec(TopicModel):
     def __init__(self, df):
         super().__init__(model_name='lda2vec', df=df)
     
-    def train_model(self, subcategories, verbose=True):
+    def train_model(self, subcategories, calc_similarity, verbose=True):
         for subcategory in subcategories:
-            self.train_model_subcategory(subcategory, verbose) 
+            self.train_model_subcategory(subcategory, calc_similarity, verbose) 
         return self.df
     
-    def train_model_subcategory(self, subcategory, verbose=True, calc_similarity=True):
+    def train_model_subcategory(self, subcategory, calc_similarity, verbose=True):
 
         start_time_overall = time.time()
         subset_df = self.df[self.df['subcategory'] == subcategory]
@@ -148,21 +153,12 @@ class LDA2Vec(TopicModel):
                 # Refine the topic label using Groq API
                 lda2vec_topic_label = generate_topic_label(common_words, star_rating)
                 lda2vec_topic_labels.append(lda2vec_topic_label)
-            # print(lda2vec_topic_labels)
-
 
             # STEP 7: Map topic words and labels back to DataFrame
             for idx, doc_id in enumerate(group.index):
                 cluster_id = cluster_labels[idx]
                 lda2vec_topic_label = lda2vec_topic_labels[cluster_id]
                 lda2vec_topic_words_text = lda2vec_topic_words[cluster_id]
-
-                # Calculate similarity scores between review and topic words using similarity_scores function
-                # lda2vec_words_similarity_score = similarity_scores('all-MiniLM-L6-v2', [group.loc[doc_id, 'review_text']], [lda2vec_topic_words_text])[0]
-                # # print(lda2vec_words_similarity_score)
-
-                # # Calculate similarity scores between review and topic label using similarity_scores function
-                # lda2vec_label_similarity_score = similarity_scores('all-MiniLM-L6-v2', [group.loc[doc_id, 'review_text']], [lda2vec_topic_label])[0]
 
                 # Assign values to DataFrame 
                 self.df.at[doc_id, 'lda2vec_topic_id'] = cluster_id
