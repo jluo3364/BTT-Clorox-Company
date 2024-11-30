@@ -2,10 +2,12 @@
 
 import argparse
 import pandas as pd
-from TopicModel import LSA
+# from TopicModel import LSA
+import LSA
 from TopicModel import LDA2Vec
 # from TopicModel import Top2Vec
-from TopicModel import bertopic_kmeans
+# from TopicModel import bertopic_kmeans
+import bertopic_kmeans
 from procedure import *  
 import warnings
 warnings.filterwarnings("ignore")
