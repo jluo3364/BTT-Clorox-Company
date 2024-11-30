@@ -78,19 +78,3 @@ class TopicModel():
         # remove double quotes
         topic_label = topic_label.replace('"', '')
         return topic_label
-    
-    @staticmethod
-    def subcategories_of_size(df, target_sizes, num_subcategories, allowance=1000):
-        """
-        df: dataframe, the data to find subcategories from.
-        target_sizes = list of integers, sizes to find subcategories for.
-        num_subcategories: list of integers, parallel to target_sizes and indicates number of subcategories to return for each target_size.
-        allowance: integer, how much to allow the size to vary from the target_size.
-        Returns a list of subcategories that have sizes that are target_sizes +/- allowance.
-        """
-        subcat_sizes = df['subcategory'].value_counts().to_dict()
-        subcategories = []
-        for target_size in target_sizes:
-            valid_subcats = [name for name, size in subcat_sizes.items() if abs(size - target_size) < allowance]
-            subcategories.extend(valid_subcats[:num_subcategories[target_sizes.index(target_size)]])
-        return subcategories
