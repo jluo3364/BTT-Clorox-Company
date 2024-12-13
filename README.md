@@ -9,6 +9,7 @@ Jessica Luo, Saloni Jain, Melody He
 3. [External Dependencies](#external-dependencies)  
    - [Installation](#installation)  
 4. [Repository Structure](#repository-structure)  
+5. [Usage](#usage)
 
 
 ## Project Objective
@@ -54,27 +55,125 @@ To run the code in this repository, make sure you have the dependencies listed i
     python -c "import pkg_resources; print('All dependencies are installed.')"
     ```
 
+Our project also uses the Groq API, which requires the user to acquire an API key and store it securely.
+
+### Step 1: Acquire the API Key
+1. **Sign up for a Groq Account**:  
+   Visit the [Groq Developer Portal](https://developer.groq.com/) and create an account if you don’t already have one.
+
+2. **Generate an API Key**:  
+   - Log in to your Groq account.
+   - Navigate to the **API Keys** section under your account settings.
+   - Click **Generate API Key** and copy the key. Make sure to save it securely, as you won't be able to view it again.
+
+---
+
+### Step 2: Store the API Key in an `.env` File
+1. Create a new file named `.env` in the root directory of your project.
+2. Add the following line to the `.env` file:
+   ```bash
+   GROQ_API_KEY=<your-api-key>
+
 ## Repository Structure
 
 ```
 BTT-Clorox-Company/
+├── bertopic/                           # Folder containing bertopic notebooks experimenting with clustering methods
+│   ├── bertopic_hdbscan.ipynb          
+│   ├── bertopic_kmeans_lotion.ipynb    
+│   ├── bertopic_hdbscan.ipynb         
+│   └── bertopic_kmeans_lotion.ipynb    
+├── clustering                          # Folder containing initial experimentation with clustering
+│   ├── lda.ipynb
+│   ├── llm_clustering.ipynb
+|   └── nmf.ipynb
+├── data/                               # Folder containing input data
+├── eda/                                # Folder containing initial eda
+├── outputs/                            # Folder containing topic modeling outputs
+├── topic_modeling_notebooks/           # Folder containing notebooks for topic modeling
+│   ├── lda2vec.ipynb
+│   ├── lsa_standardized.ipynb
+│   ├── lsa_with_preprocessing.ipynb
+│   ├── top2vec_modeling.ipynb 
 ├── TopicModel/                         # Folder containing Topic Model classes for LDA2Vec, LSA, and Top2Vec
 │   ├── TopicModel.py                   # Base Topic Model class
 │   ├── LDA2Vec.py                      # LDA2Vec class implementation, inherits TopicModel
 │   ├── LSA.py                          # LSA class implementation, inherits TopicModel
-├── bertopic/                           # Folder containing bertopic notebooks experimenting with clustering methods
-│   ├── bertopic_hdbscan.ipynb          # Detailed installation instructions
-│   └── bertopic_kmeans_lotion.ipynb    # In-depth usage guide and examples
-├── clustering                          # Folder containing initial experimentation with clustering
-│   ├──
-|   └──
-├── data/                               # Folder containing input data
-├── eda/                                # Folder containing initial eda
-├── merging/                            # Folder containing notebooks to merge topic modeling outputs
-│   ├── 
-│   └── 
+│   ├── bertopic_kmeans.py              # Bertopic class implementation, inherits TopicModel
+│   ├── Top2Vec_Model.py                # Top2Vec class implementation, inherits TopicModel
+│   ├── bertopic testing/               # Notebooks to test bertopic class implementation
+│   ├── lsa testing/                    # Notebooks to test lsa class implementation
+│   ├── lda2vec_testing/                # Notebooks to test lda2vec class implementation
 ├── .gitignore                          # Files and directories to ignore in git
+├── main.py                             # Contains logic for command line interface
+├── procedure.py                        # Contains standardized procedure for each of the topic modeling methods
+├── README.md                           # Project README 
 ├── requirements.txt                    # List of dependencies
-└── README.md                           # Project README 
+└── runmodel                            # Executable for running topic modeling
+```
+
+## Usage
+
+The `runmodel` script provides a command-line interface for running various topic modeling algorithms.
+
+### Make the Script Executable
+
+To make the `runmodel` script executable, run the following command:
+```bash
+chmod a+x runmodel
+```
+
+```markdown
+## Usage
+
+The `runmodel` script provides a command-line interface for running various topic modeling algorithms.
+
+### Make the Script Executable
+
+To make the `runmodel` script executable, run the following command:
+```bash
+chmod a+x runmodel
+```
+
+### Basic Usage
+
+```bash
+./runmodel -input <input_csv> -model_type <model> -output <output_csv> [-subcategories <subcategory_list>]
+```
+
+### Arguments
+
+- `-input` *(required)*: Path to the input CSV file containing reviews data.
+- `-model_type` *(required)*: Type of topic model to run. Options:
+  - `BERTopic`
+  - `LSA`
+  - `LDA2Vec`
+  - `Top2Vec`
+- `-output` *(required)*: Path to save the output CSV file with topic modeling results.
+- `-subcategories` *(optional)*: Comma-separated list of subcategories to analyze. Defaults to all subcategories in the dataset.
+
+---
+
+### Examples
+
+#### Run LDA2Vec on the Entire Dataset
+```bash
+./runmodel -input data/processed_reviews.csv -model_type LDA2Vec -output outputs/lda2vec_output.csv
+```
+
+#### Run LSA on Specific Subcategories
+```bash
+./runmodel -input data/clorox_data.csv -model_type LSA -output outputs/lsa_output.csv -subcategories "WOOD/FURNITURE/DUST"
+```
+
+#### Run BERTopic on All Subcategories
+```bash
+./runmodel -input data/processed_reviews.csv -model_type BERTopic -output outputs/bertopic_output.csv
+```
+
+#### Run Top2Vec on the Dataset
+```bash
+./runmodel -input data/review_dataset.csv -model_type Top2Vec -output outputs/top2vec_output.csv
+```
 ```
 

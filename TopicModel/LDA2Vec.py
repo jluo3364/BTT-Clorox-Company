@@ -4,7 +4,6 @@ try:
 except ImportError:
     # When executed directly or in a Jupyter notebook
     from TopicModel import TopicModel
-import pandas as pd
 import numpy as np
 
 import spacy
@@ -33,12 +32,39 @@ from procedure import *
 # Load spacy model
 nlp = spacy.load('en_core_web_sm')
 
+# LDA2Vec topic model class
 class LDA2Vec(TopicModel):
+    """
+    LDA2Vec Topic Modeling Class.
 
+    This class extends the base TopicModel class and implements the LDA2Vec
+    algorithm for topic modeling. It combines Latent Dirichlet Allocation (LDA)
+    with Word2Vec to produce richer document embeddings and clusters topics.
+
+    Attributes:
+        df (pd.DataFrame): The input dataframe containing review data.
+    """
     def __init__(self, df):
+        """
+        Initializes the LDA2Vec model with the input dataframe.
+
+        Args:
+            df (pd.DataFrame): Input dataframe containing review data.
+        """
         super().__init__(model_name='lda2vec', df=df)
     
-    def train_model(self, subcategories, calc_similarity, verbose=True):
+    def train_model(self, subcategories, calc_similarity=False, verbose=True):
+        """
+        Trains the LDA2Vec model on specified subcategories.
+
+        Args:
+            subcategories (list): List of subcategories to model.
+            calc_similarity (bool): Whether to calculate similarity scores.
+            verbose (bool): Whether to print detailed progress information.
+
+        Returns:
+            pd.DataFrame: Updated dataframe with topic modeling results.
+        """
         for subcategory in subcategories:
             self.train_model_subcategory(subcategory, calc_similarity, verbose) 
         return self.df
