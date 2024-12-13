@@ -123,18 +123,6 @@ To make the `runmodel` script executable, run the following command:
 chmod a+x runmodel
 ```
 
-```markdown
-## Usage
-
-The `runmodel` script provides a command-line interface for running various topic modeling algorithms.
-
-### Make the Script Executable
-
-To make the `runmodel` script executable, run the following command:
-```bash
-chmod a+x runmodel
-```
-
 ### Basic Usage
 
 ```bash
